@@ -27,7 +27,7 @@ namespace todomiguel.Functions.Functions
                 deleted++;
             }
 
-            log.LogInformation($"Deleted2: {deleted} items at: {DateTime.Now}");
+            log.LogInformation($"Deleted: {deleted} items at: {DateTime.Now}");
         }
     }
 }

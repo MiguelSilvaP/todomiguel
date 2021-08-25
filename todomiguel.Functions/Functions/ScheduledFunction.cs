@@ -15,7 +15,7 @@ namespace todomiguel.Functions.Functions
             [Table("todo", Connection = "AzureWebJobsStorage")] CloudTable todoTable,
             ILogger log)
         {
-            log.LogInformation($"Deleted completed function executed at: {DateTime.Now}");
+            log.LogInformation($"Deleting completed function executed at: {DateTime.Now}");
 
             string filter = TableQuery.GenerateFilterConditionForBool("IsCompleted", QueryComparisons.Equal, true);
             TableQuery<TodoEntity> query = new TableQuery<TodoEntity>().Where(filter);

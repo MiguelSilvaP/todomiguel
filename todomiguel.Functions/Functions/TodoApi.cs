@@ -77,7 +77,7 @@ namespace todomiguel.Functions.Functions
             TableOperation findOperation = TableOperation.Retrieve<TodoEntity>("TODO", id);
             TableResult findResult = await todoTable.ExecuteAsync(findOperation);
 
-            if(findResult.Result == null)
+            if (findResult.Result == null)
             {
                 return new BadRequestObjectResult(new Response
                 {
